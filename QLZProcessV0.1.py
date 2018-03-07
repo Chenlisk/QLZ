@@ -66,7 +66,6 @@ def  process(pstr):
     string=string.lstrip('\n').rstrip('\n')
     return string   
 
-
 def getBetween(string,start,end,mode='10'):
     #mode ={00-前無後無,10=前有后無,11=前有後有}
     if mode == '00':
@@ -91,8 +90,8 @@ if __name__ == '__main__':
         path=sys.argv[1]
     else :        
         print ("---$:usage: cbetaDataProcess.py dirname.")
-        # sys.exit(1)
-        path='H:/WORKSPACE/QLZ_s/QLZ'
+        sys.exit(1)
+        # path='H:/WORKSPACE/QLZ_s/QLZ'
     print ("--------$:building file lists...")
     fileList = []
     for dirpath, dirnames, filenames in os.walk(path):
